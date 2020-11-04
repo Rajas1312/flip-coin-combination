@@ -65,3 +65,58 @@ l=$((g/10*100))
 echo "the precentage of TH is $l"
 m=$((h/10*100))
 echo "the percentage of TT is $m"
+
+
+n=0
+o=0
+p=0
+q=0
+r=0
+s=0
+declare -A triplet
+for i in {1..10}
+do
+	if [ $((RANDOM%6)) -eq 0 ]
+	then
+		triplet[$i]="HHH"
+		((n++))
+	fi
+		if [ $((RANDOM%6)) -eq 1 ]
+		then
+			triplet[$i]="HHT"
+			((o++))
+		fi
+			if [ $((RANDOM%6)) -eq 2 ]
+			then
+				triplet[$i]="HTH"
+				((p++))
+			fi
+				if [ $((RANDOM%6)) -eq 3 ]
+				then
+					triplet[$i]="TTT"
+					((q++))
+				fi
+					if [ $((RANDOM%6)) -eq 4 ]
+					then
+						triplet[$i]="THT"
+						((r++))
+					fi
+						if [ $((RANDOM%6)) -eq 5 ]
+						then
+							triplet[$i]="TTH"
+							((s++))
+						fi
+			echo "the triplet dictionary is "${triplet[@]}
+done
+t=$((n/10*100))
+echo "the percentage of HHH is $t"
+u=$((o/10*100))
+echo "the percentage of HHT is $u"
+v=$((p/10*100))
+echo "the percentage of HTH is $v"
+w=$((q/10*100))
+echo "the percentage of TTT is $w"
+x=$((r/10*100))
+echo "the percntage of THT is $x"
+y=$((s/10*100))
+echo "the percentage of TTH is $y"
